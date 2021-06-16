@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-size: 16px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+}
+
+
+#header {
+    width: 100%;
+    margin: auto;
+    height: 60px;
+    background-color: #fff;
+}
+
+.row-header {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-header {
+    display: flex;
+}
+
+.logo-header img {
+    width: 180px;
+    display: inline;
+}
+
+#header ul li{
+    display: inline;
+    padding-right: 20px;
+    
+}
+
+.row-header .login-header a{
+    color: #000;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Odibee Sans', cursive;
+}
+
+#header span{
+    color: #000;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 50px;
+    font-family: 'Odibee Sans', cursive;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#content {
+    /* width: 1200px; */
+    max-width: 100%;
+    margin: auto;
+}
+
+.row-content {
+    display: flex;
+}
+
+.row-content .left {
+    flex: 1;
+    background-color:dodgerblue;
+
+}
+
+
+
+.left h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    padding: 40px 0;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    margin: 20px ;
+}
+
+.left li {
+    width: 100%;
+    list-style: none;
+    padding: 40px 20px;
+    border: solid 1px #ccc;
+}
+
+.left ul li a{
+    font-size: 20px;
+    font-family: 'Staatliches', cursive;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.left i {
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 10px;
+    color: #fff;
+}
+
+.left li:hover {
+    background-color: darkblue;
+    color: #000;
+    font-weight: 600;
+}
+
+.row-content .right {
+    flex: 5;
+    background-color: #a3e261;
+}
+
+.right .search {
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+}
+
+.search input {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px 0 0 10px;
+}
+
+.search form {
+    display: flex;
+}
+
+.search button {
+    padding: 4px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    font-size: 16px;
+    background-color:red ;
+
+}
+.search button i{
+    font-size: 20px;
+}
+
+
+.product {
+    display: flex;
+}
+
+.add-product {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 35%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.add-product .from-add {
+    padding: 20px 0;
+    border-bottom: solid 2px #a3eb1d;
+    padding: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.add-product .from-add.error input,.add-product .from-add.error select {
+    background-color: rgb(231, 159, 173);
+    border: crimson solid 1px;
+}
+
+.add-product .from-add.success input,.add-product .from-add.success select  {
+    background-color: rgb(105, 238, 116);
+    border: green solid 1px;
+}
+ 
+.add-product .from-add input,select {
+    width: 100%;
+    border-radius: 10px;
+    padding:0 20px;
+    border: solid 1px #ccc;
+    font-size: 16px;
+    height: 40px;
+}
+
+.add-product .from-add label {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+}
+
+.add-product span{
+    color: firebrick;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.add-product .error-message {
+    color:red;
+    display: none;
+}
+
+.add-product .from-add.error .error-message {
+    color: red;
+    display: inline;
+}
+
+.add-product #add_student {
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    background-color:coral;
+    color: #fff;
+    font-weight: 600;
+    height: 40px;
+    margin:0 15px;
+}
+
+.add-product #add_student:hover {
+    background-color:dodgerblue ;
+}
+
+.table-product {
+    background-color: #fff;
+    width: 65%;
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 20px 5px;
+}
+
+.table-product table {
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.table-product table td,th{
+    width: 16.66%;
+    border: 1px solid black;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+#footer {
+    width: 100%;
+    background-color: rgb(225, 239, 241);
+}
+
+.row-footer {
+    padding: 30px 0 0 0;
+    width: 1200px ;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border-bottom: solid #000;
+}
+
+.logo-footer {
+    width: 200px;
+}
+
+.fastaccess-footer {
+    
+}
+
+.fastaccess-footer li{
+    list-style-type: none;
+}
+
+.fastaccess-footer li a{
+    font-size: 16px;
+    font-family: 'Odibee Sans', cursive;
+    line-height: 40px;
+    letter-spacing: 2px;
+
+}
+
+.information-footer h1 {
+    font-size: 16px;
+    font-family: 'Odibee Sans', cursive;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+.follow-footer i{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.nocopy-footer {
+    padding:30px 0;
+    text-align: center;
+}
+
+.nocopy-footer h1{
+    font-family: 'Sigmar One', cursive;
+    font-size: 20px;
+}

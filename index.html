@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6d708c259b.js" crossorigin="anonymous"></script>
+    <title>Quản lý Sinh Viên</title>
+</head>
+<body>
+
+    <!-------------------------Header----------------------->
+
+    <div id="header">
+        <div class="row-header">
+            <div class="logo-header">
+                <div>
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div>
+                    <span>Quản lý trường học</span>
+                </div>
+            </div>
+            <div class="login-header">
+                <ul>
+                    <li><a href="">Đăng Nhập</a></li>
+                    <li><a href="">Đăng Ký</a></li>
+                    <li><i class="fas fa-bars"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -----------------Content--------------------------->
+
+
+    <div id="content">
+        <div class="row-content">
+            <div class="left">
+                <h1>
+                    ADMIN
+                </h1>
+                <ul>
+                    <li>
+                        <a href="" >
+                            <i class="fas fa-home"></i>
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li style="background-color: darkblue;">
+                        <a href="">
+                            <i class="fas fa-dolly-flatbed"></i>
+                            Quản lý sinh viên
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-credit-card"></i>
+                            Quản lý môn học
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-clipboard"></i>
+                            Quản lý giảng viên
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="search">
+                    <form action="">
+                        <input type="text" name="" id="" placeholder="Search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="product">
+                    <div class="add-product">
+                        <div class="from-add">
+                            <label for="">Tên sinh viên <span>*</span></label>
+                            <input type="text" name="" id="name_student" placeholder="Nhập tên sinh viên">
+                            <small class="error-message">Nhập lại tên sinh viên </small>
+                        </div>
+
+                        <div class="from-add">
+                            <label for="">ngày sinh <span>*</span></label>
+                            <input type="date" name="" id="date_student">
+                            <small class="error-message">Nhập lại ngày sinh </small>
+                        </div>
+    
+                        <div class="from-add">
+                            <label for=""> Địa chỉ <span>*</span></label>
+                            <input type="text" name="" id="address_student" placeholder="Nhập địa chỉ">
+                            <small class="error-message">Nhập lại địa chỉ </small>
+                        </div>
+    
+                        <div class="from-add">
+                            <label for="">Giới tính <span>*</span></label>
+                            <select id="sex_student" >
+                            <option value="">LỰA CHỌN GIỚI TÍNH :</option>
+                            <option value="boy">NAM</option>
+                            <option value="girl">NỮ</option>
+                            <option value="lgbt&gay">KHÁC</option>
+                            </select>
+                            <small class="error-message">Lựa chọn giới tính </small>
+                        </div>
+    
+                        <div class="from-add">
+                            <label for="">Số điện thọai <span>*</span></label>
+                            <input type="number" name="" id="phone_student" placeholder="Nhập số điện thọai">
+                            <small class="error-message">Nhập lại số điện thoại </small>
+                        </div>
+    
+                        <div class="from-add">
+                            <label for="">Ghi chú</label>
+                            <input type="text" name="" id="note_student">
+                        </div>
+    
+                        <div class="from-add">
+                            <input id="add_student" onclick="themStudent()" type="submit" value="Thêm SV">
+                        </div>
+                    </div>
+                    <div class="table-product">
+                        <table class="danhSachSanPham" id="bang">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------Footer---------------------------->
+
+    <div id="footer">
+        <div class="row-footer">
+            <div class="logo-footer">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fastaccess-footer">
+                <div class="menu-footer">
+                    <ul>
+                        <li><a href="">trang chủ</a></li>
+                        <li><a href="">quản lý sinh viên</a></li>
+                        <li><a href="">quản lý môn học</a></li>
+                        <li><a href="">quản lý giảng viên</a></li>
+                        <li><a href="">sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information-footer">
+                <h1><i class="fas fa-phone"></i>
+                    hotline: 123456789
+                </h1>
+                <h1>
+                    <i class="fab fa-chrome"></i>
+                    website: abc.com
+                </h1>
+                <h1>
+                    <i class="fas fa-envelope"></i>
+                    mail: abc@gmail.com
+                </h1>
+                <h1>
+                    <i class="fas fa-home"></i>
+                    live: Cau Giay, Ha Noi, Viet Nam
+                </h1>
+            </div>
+            <div class="follow-footer">
+                <div>
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+                <div>
+                    <i class="fab fa-instagram-square"></i>
+                </div>
+                <div>
+                    <i class="fab fa-twitter-square"></i>
+                </div>
+            </div>
+        </div>
+        <div class="nocopy-footer">
+            <div>
+                <h1>Copyrights© 2021. Developed with  by DuaHau</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
