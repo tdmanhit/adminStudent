@@ -4,6 +4,7 @@ var addressStudent = document.querySelector('#address_student')
 var sexStudent = document.querySelector('#sex_student')
 var phoneStudent = document.querySelector('#phone_student')
 var addStudent = document.querySelector('#add_student')
+var fixStudent = document.querySelector('#fix_student')
 var errorFrom = true;
 var linkApiStudent = 'http://localhost:3000/students'
 var key = 'add'
@@ -91,7 +92,45 @@ function renderStudent(students){
     document.querySelector('#bang').innerHTML = tableStudent;                     
 }
 
-function themStudent(){
+addStudent.onclick = function(){
+    var nameS = nameStudent.value.trim();
+    var dateS = dateStudent.value.trim();
+    var phoneS = phoneStudent.value.trim();
+    var sexS = sexStudent.value.trim();
+    var addressS = addressStudent.value.trim();
+    if(setValue()==true)
+    {
+        handerAddStudent({
+            name: nameS,
+            date: dateS,
+            phone:phoneS,
+            sex:sexS,
+            address:addressS,
+    })
+    handerGetStudent(renderStudent)
+    }
+}
+
+fixStudent.onclick = function(){
+    var nameS = nameStudent.value.trim();
+    var dateS = dateStudent.value.trim();
+    var phoneS = phoneStudent.value.trim();
+    var sexS = sexStudent.value.trim();
+    var addressS = addressStudent.value.trim();
+    if(setValue()==true)
+    {
+        handerFixStudent(fixStudent.data,{
+            name: nameS,
+            date: dateS,
+            phone:phoneS,
+            sex:sexS,
+            address:addressS,
+    })
+    handerGetStudent(renderStudent)
+    }
+}
+
+function setValue() {
     var nameS = nameStudent.value.trim();
     var dateS = dateStudent.value.trim();
     var phoneS = phoneStudent.value.trim();
@@ -132,26 +171,8 @@ function themStudent(){
     }else{
         messageSuccess(addressStudent);
     }
-
-    if(errorFrom === true & key == 'add'){
-        handerAddStudent({
-            name: nameS,
-            date: dateS,
-            phone:phoneS,
-            sex:sexS,
-            address:addressS,
-        })
-    }
-    if(errorFrom === true){
-        handerFixtudent(key,{
-            name: nameS,
-            date: dateS,
-            phone:phoneS,
-            sex:sexS,
-            address:addressS,
-        })
-    }
-    console.log("key" + key)
+    
+    return errorFrom
 }
 
 function updateStudent(id)
@@ -166,9 +187,10 @@ function updateStudent(id)
             addressStudent.value = student.address;
             sexStudent.value = student.sex;
             phoneStudent.value = student.phone;
-            addStudent.value = 'FIX SV'
+            addStudent.style.display = 'none';
+            fixStudent.style.display = 'inline'
+            fixStudent.data = id
         })
-    key = id
 }
 
 

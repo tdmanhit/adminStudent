@@ -252,6 +252,18 @@ body {
     margin:0 15px;
 }
 
+.add-product #fix_student {
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    background-color:coral;
+    color: #fff;
+    font-weight: 600;
+    height: 40px;
+    margin:0 15px;
+    display: none;
+}
+
 .add-product #add_student:hover {
     background-color:dodgerblue ;
 }
